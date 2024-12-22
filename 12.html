@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зміна кольору фону</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Натисніть кнопку для зміни кольору фону</h1>
+  <button id="colorButton">Змінити колір</button>
+
+  <script>
+    const button = document.getElementById('colorButton');
+
+    button.addEventListener('click', () => {
+      const randomColor = `rgb(${Math.floor(Math.random() * 256)}, 
+                              ${Math.floor(Math.random() * 256)}, 
+                              ${Math.floor(Math.random() * 256)})`;
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
